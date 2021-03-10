@@ -1,23 +1,24 @@
+fun AddNumbers(a: Int, b: Int) :Int{
+    return a + b
+}
+
+fun PrintName(name: String?){
+    if(name == null){
+        println("NULL ERROR")
+        return
+    }
+
+    println("Hello $name")
+    return
+}
+
+fun GetString() = "String abc"
+
+
+
 fun main(){
-    val name: String = "Jakub"
-    println(name)
-
-    var prop1: Int? = 27
-    if (prop1 == null){
-        println("NULL")
-    }
-    else{
-        println("NOT NULL")
-    }
-
-    when(prop1){
-        25 -> println("Hi")
-        26 -> println("There")
-        else -> println("ERROR")
-    }
-
-    prop1 = null
-    var prop2: Int = if(prop1 != null) prop1 else 100
-
-    println(prop2)
+    println(AddNumbers(10,20))
+    PrintName("Jakub")
+    PrintName(null);
+    println(GetString())
 }
